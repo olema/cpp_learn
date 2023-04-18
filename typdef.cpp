@@ -12,10 +12,15 @@ int main() {
 	c c = 128;
 	const char *pa = &c;
 	const int *pi = &i;
+	constexpr int ci = 100;
 	int *const pi2 = &i;
 	int *pi3;
+	auto f = i;
 
-	pi3 = 42;
+	std::cout << f << "\n";
+
+	pi3 = &j;
+	//ci = 200;
 
 	std::cout << *pa << std::endl;
 
@@ -39,7 +44,7 @@ int main() {
 	
 	std::cout << *pi2 << std::endl; 
 
-	pi2 = &j;
+//	pi2 = &j;
 
 //	*pi = *pi + 1;
 }
