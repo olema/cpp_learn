@@ -8,12 +8,14 @@ using std::cerr;
 using std::string;
 
 int main() {
-	string s;
+	string s, s1, word;
 	
 	cout << "Input string: ";	
-	cin >> s;
-	cout << "You input string is " << s << endl;
-
+	cin >> s >> s1;
+	cout << s << endl << s1 << endl;
+	cout << "input long text, и заверши его ctrl-d:" << endl;
+	while (cin >> word)
+		cout<<word<<endl;
 	if (s.empty())
 		cout << "string empty" << endl;
 	else
@@ -29,6 +31,7 @@ int main() {
 	}
 
 	cout << "number of symbols in string s is " << i << endl;
+
 
 	return 0;
 }
