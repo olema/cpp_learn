@@ -6,11 +6,15 @@ using std::cin;
 using std::cout;
 using std::endl;
 using std::cerr;
+using std::string;
 
 int main() {
 
 	Sales_data data1, data2;
 	double price = 0;
+	string s1;
+	string s2("oaoaoaoa");
+	string s3 = "kjsdhfkdsjfdskjh";
 
 	cin >> data1.bookNo >> data1.units_sold >> price;
 	data1.revenue = data1.units_sold * price;
@@ -25,6 +29,8 @@ int main() {
 			cout << totalRevenue/totalCnt << endl;
 		else
 			cout << "(no sales)" << endl;
+		s1 = "fddfsfs";
+		cout << s1 << ", " << s2 << ", " << s3 << endl;
 		return 0;
 	} else {
 		cerr << "Data must refer to the same ISBN" << endl;
