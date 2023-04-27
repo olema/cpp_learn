@@ -9,7 +9,19 @@ using std::string;
 
 int main() {
 	string s, s1, word;
-	
+    string st1(10, 'a'), str_get;
+    string str_ru1 = "аест";
+    string str_ru2 = "бест";
+    
+    cout << "str_ru1.size() = " << str_ru1.size() << endl;
+    cout << (str_ru1>str_ru2) << endl;
+    cout << (str_ru1 == str_ru2) << endl;
+
+    cout << "input line for getline" << endl;
+    getline(cin, str_get);
+    cout << "input string from getline(cin, str_get):" << endl;
+    cout << str_get << endl;
+    cout << st1 << endl;	
 	cout << "Input string: ";	
 	cin >> s >> s1;
 	cout << s << endl << s1 << endl;
