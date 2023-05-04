@@ -15,12 +15,9 @@ int main() {
     getline(cin, str);
 
     if (!str.empty())
-        for (auto &c: str)
-            if (c!=',' && c!='.' && c!=':')
+        for (char c: str)
+            if (!ispunct(c))
                 str1 += c;
 
     cout << str1 << endl;
-
-    for (auto &x: s)
-        x = '*';
 }
