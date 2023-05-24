@@ -11,6 +11,7 @@
 int main() {
     string s("some string");
     vector<int> v{11,12,13,14,15};
+    vector<string> vs{"double", "two", "string-string"};
 
     if (s.begin() != s.end()) {
         auto iter_b = s.begin(), iter_e = s.end();
@@ -28,4 +29,26 @@ int main() {
         *it = toupper(*it);
 
     cout << s << endl;
+
+    // тип итератора: vector<int>::iterator
+    //                vector<int>::const_iterator
+    //                string::iterator, string::const_iterator
+    // cbegin() и cend() возвращают константный тип итератора const_iterator,
+    // если нужно только читать из обьекта
+    
+    auto cb = v.cbegin(), ce = v.cend();
+    for (auto it = cb; it != ce; it++)
+        cout << "const_iter " << *it << endl;
+
+    //*cb = 5; //- тут ошибка
+
+    // совмещение обращение к элементу вектора и к данным элемента
+    auto vs_cb = vs.cbegin(), vs_ce = vs.cend();
+    cout << "(*vs_cb).empty() = " << (*vs_cb).empty() << endl;
+    ++vs_cb;
+    cout << "vs_cb->empty() = " << vs_cb->empty() << endl;
+    for (auto it = vs.cbegin(); it != vs.cend(); it++)
+        cout << "vs elements: " << *it << endl;
+
+
 }
