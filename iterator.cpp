@@ -50,5 +50,12 @@ int main() {
     for (auto it = vs.cbegin(); it != vs.cend(); it++)
         cout << "vs elements: " << *it << endl;
 
+    // iter + n
+    // iter - n
+    // iter += n
+    // iter -= n
+    // iter - iter
+    // >, >=, <, <=
+
 
 }
