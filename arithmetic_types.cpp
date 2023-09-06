@@ -2,7 +2,7 @@
 
 int main() {
     bool b = true;
-    char c = 'a'; // symbol 8 bits
+    unsigned char c = 'a'; // symbol 8 bits
     wchar_t wc = 'w'; // wide symbol 16 bits
     char16_t c16t = 'Б'; // unicode 16 bits
     char32_t c32t = 'Г'; // unicode 32 bits
@@ -13,4 +13,14 @@ int main() {
     float f = 3.14; // 6 numbers
     double d = 2.71828; // 10 numbers
     long double ld = 1.41421356237; // 10 numbers
+
+    cout << c16t << endl;
+    cout << c32t << endl;
+    cout << c << endl;
+    
+    c = 0;
+    for (i = 0; i < 257; i++) {
+        cout << int(c) << endl;
+        c++;
+    }
 }
